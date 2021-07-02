@@ -1,0 +1,21 @@
+version: '3.1'
+
+services:
+  grafana:
+    image: grafana/grafana
+    restart: always
+    user: root
+    volumes:
+      - ./data/grafana/logs:/var/log/grafana:rw
+      - ./data/grafana/data:/var/lib/grafana:rw
+      - ./grafana/:/etc/grafana
+      - ./certs:/opt/certs
+    working_dir: /app
+    networks:
+      - ops
+    ports: 
+      - 3000:3000
+    container_name: grafana
+networks:
+  ops:
+    external: true

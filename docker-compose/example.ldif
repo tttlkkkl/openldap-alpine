@@ -1,0 +1,89 @@
+dn: ou=Groups,dc=lihuaio,dc=com
+ou: Group
+ou: Groups
+objectClass: organizationalUnit
+
+dn: uid=111,ou=Users,dc=lihuaio,dc=com
+displayName:: 5p+l55yL
+uid: 111
+mail: 111@lihuaio.com
+ou: Users
+sn: li
+cn: hua
+objectClass: inetOrgPerson
+userPassword: {SSHA}qrlOFY1vBQu2NNE+pXf0e6h/k4Fk+SoJ
+
+dn: uid=api,ou=Users,dc=lihuaio,dc=com
+displayName: api
+uid: api
+mail: api@lihuaio.com
+ou: Users
+cn: manager user
+sn: user
+objectClass: inetOrgPerson
+userPassword: {SSHA}qrlOFY1vBQu2NNE+pXf0e6h/k4Fk+SoJ
+
+dn: uid=read,ou=Users,dc=lihuaio,dc=com
+displayName:: 6K+755So5oi3
+uid: read
+mail: read@lihuaio.com
+ou: Users
+cn: read user
+sn: read
+objectClass: inetOrgPerson
+userPassword: {SSHA}qrlOFY1vBQu2NNE+pXf0e6h/k4Fk+SoJ
+
+dn: uid=super,ou=Users,dc=lihuaio,dc=com
+displayName:: 566h55CG5ZGY
+uid: super
+mail: super@lihuaio.com
+ou: Users
+cn: hua
+sn: li
+objectClass: inetOrgPerson
+userPassword: {SSHA}qrlOFY1vBQu2NNE+pXf0e6h/k4Fk+SoJ
+
+dn: uid=editor,ou=Users,dc=lihuaio,dc=com
+displayName:: 57yW6L6R
+uid: editor
+mail: editor@lihuaio.com
+ou: Users
+cn: hua
+sn: li
+objectClass: inetOrgPerson
+userPassword: {SSHA}qrlOFY1vBQu2NNE+pXf0e6h/k4Fk+SoJ
+
+dn: uid=viewer,ou=Users,dc=lihuaio,dc=com
+displayName:: 57yW6L6R
+uid: viewer
+mail: editor@lihuaio.com
+ou: Users
+cn: hua
+sn: li
+objectClass: inetOrgPerson
+userPassword: {SSHA}qrlOFY1vBQu2NNE+pXf0e6h/k4Fk+SoJ
+
+dn: cn=dev,ou=Groups,dc=lihuaio,dc=com
+cn: dev
+objectClass: groupOfNames
+member: uid=111,ou=Users,dc=lihuaio,dc=com
+
+dn: cn=grafana,ou=Groups,dc=lihuaio,dc=com
+cn: grafana
+objectClass: groupOfNames
+member: uid=18025434220,ou=Users,dc=lihuaio,dc=com
+
+dn: cn=super,cn=grafana,ou=Groups,dc=lihuaio,dc=com
+cn: super
+objectClass: groupOfNames
+member: uid=super,ou=Users,dc=lihuaio,dc=com
+
+dn: cn=editor,cn=grafana,ou=Groups,dc=lihuaio,dc=com
+cn: editor
+objectClass: groupOfNames
+member: uid=editor,ou=Users,dc=lihuaio,dc=com
+
+dn: cn=viewer,cn=grafana,ou=Groups,dc=lihuaio,dc=com
+cn: viewer
+objectClass: groupOfNames
+member: uid=viewer,ou=Users,dc=lihuaio,dc=com

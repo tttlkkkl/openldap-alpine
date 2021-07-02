@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  cert:
+    image: tttlkkkl/openssl
+    volumes:
+      - ./certs:/etc/ssl/certs
+      - ./public.ext:/public.ext
+    environment:
+      COUNTY: "CN"
+      STATE: "lihuaio"
+      LOCATION: "shenzhen"
+      ORGANISATION: "dn"
+      ROOT_CN: "YSDN"
+      ISSUER_CN: "lihuaio"
+      ROOT_NAME: "root"
+      ISSUER_NAME: "lihuaio"
+      PUBLIC_NAME: "ldap" ## 签发证书的名称--- 新证书动这个
+      PUBLIC_CN: "ldap.lihuaio.com" # 签发证书的身份识别---新证书改这个
+      RSA_KEY_NUMBITS: "2048"
+      DAYS: "3650"
+      KEYSTORE_NAME: "keystore"
+      KEYSTORE_PASS: "lihuaio@xx2021"
+      CERT_DIR: "/etc/ssl/certs"

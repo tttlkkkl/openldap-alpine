@@ -1,0 +1,6 @@
+BASE            dc=lihuaio,dc=com
+URI             ldaps://127.0.0.1
+TLS_CACERT      /etc/ssl/certs/ca.pem
+TLS_CERT        /etc/ssl/certs/ldap.crt
+TLS_KEY         /etc/ssl/certs/ldap.key
+TLS_REQCERT     allow

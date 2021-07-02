@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  ldap:
+    image: tttlkkkl/openldap
+    ports:
+      - 3636:636
+      - 3637:389
+    environment:
+      ORGANISATION_NAME: lihuaio
+      SUFFIX: dc=lihuaio,dc=com
+      ROOT_USER: root
+      ROOT_PW: 'admin'
+      CA_FILE: /etc/ssl/certs/ca.pem
+      KEY_FILE: /etc/ssl/certs/ldap.key
+      CERT_FILE: /etc/ssl/certs/ldap.crt
+      # 要求tls验证 try, never, demand,allow 这里如果配置为 demand 将导致ldap admin 等其他接入系统无法使用，因为这意味着开启双向验证。客户端也要提供证书。
+      TLS_VERIFY_CLIENT: allow
+    volumes:
+      - ./certs:/etc/ssl/certs
+      - ./data/ldap:/var/lib/openldap/openldap-data/
+      - ./access.conf:/etc/openldap/access.conf
+      - ./ldif:/ldif
+      - ./example.ldif:/example.ldif
+      - ./.ldaprc:/root/.ldaprc
+    container_name: ldap
+    command: /bin/sh
+    hostname: ldap.lihuaio.com
+    networks:
+     - ops
+networks:
+    ops:
+        external: true

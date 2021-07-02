@@ -1,0 +1,7 @@
+extendedKeyUsage = serverAuth,clientAuth
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.2=ldap.baidu.com
+IP.1=192.168.56.102DNS.1 = ldap.qq.com
+DNS.1 = ldap.qq.com

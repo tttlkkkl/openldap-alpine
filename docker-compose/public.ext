@@ -1,0 +1,9 @@
+extendedKeyUsage = serverAuth,clientAuth
+subjectAltName = @alt_names
+
+[alt_names]
+IP.1=127.0.0.1
+DNS.2 = ldap
+DNS.3 = ldap.lihuaio.com
+
+DNS.1 = ldap.lihuaio.com
