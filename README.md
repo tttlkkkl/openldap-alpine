@@ -73,12 +73,13 @@ IP.1=127.0.0.1
 DNS.2 = ldap
 DNS.3 = ldap.lihuaio.com
 ```
-- 注意：自定义内容请从 DNS.2 开始，DNS.1 预留。
+`注意：自定义内容请从 DNS.2 开始，DNS.1 预留。`
 - 更改 `openssl-compose.yml` 文件中的环境变量：
+
 |环境变量|范例|说明|
 |---|---|---|
 |COUNTY: |"CN"|国家|
-|STATE: |"GD"|周、省份|
+|STATE: |"GD"|州、省份|
 |LOCATION: |"shenzhen"|城市|
 |ORGANISATION: |"lihuaio"|组织名字|
 |ROOT_CN: |"lihuaio"|根证书组织名字|
@@ -92,6 +93,7 @@ DNS.3 = ldap.lihuaio.com
 |KEYSTORE_NAME: |"keystore"|keystore名称|
 |KEYSTORE_PASS: |"dn@2019.06.12#ad"|keystore 密码|
 |CERT_DIR: |"/etc/ssl/certs"|证书生成路径，将此目录挂载到本地路径中以便使用生成的证书|
+
 - 执行签发命令
 ```bash
 docker-compose -f docker-compose/openssl-compose.yml up
