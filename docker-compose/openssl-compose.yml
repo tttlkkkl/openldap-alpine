@@ -1,8 +1,8 @@
-version: '3'
+version: "3"
 
 services:
   cert:
-    image: tttlkkkl/openssl
+    image: tttlkkkl/openssl:darwin-arm64
     volumes:
       - ./certs:/etc/ssl/certs
       - ./public.ext:/public.ext

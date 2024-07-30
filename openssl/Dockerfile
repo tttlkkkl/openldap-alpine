@@ -1,10 +1,10 @@
-FROM alpine:3.13
+FROM alpine:3.20
 LABEL MAINTAINER="tttlkkkl <tttlkkkl@aliyun.com>"
 ENV TZ "Asia/Shanghai"
 ENV TERM xterm
 
-RUN echo 'http://mirrors.aliyun.com/alpine/v3.13/main/' > /etc/apk/repositories && \
-    echo 'http://mirrors.aliyun.com/alpine/v3.13/community/' >> /etc/apk/repositories
+RUN echo 'http://mirrors.aliyun.com/alpine/v3.20/main/' > /etc/apk/repositories && \
+    echo 'http://mirrors.aliyun.com/alpine/v3.20/community/' >> /etc/apk/repositories
 
 # default variables
 ENV COUNTY "CN"

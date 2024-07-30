@@ -2,7 +2,7 @@ version: '3'
 
 services:
   ldap:
-    image: tttlkkkl/openldap
+    image: tttlkkkl/openldap:darwin-arm64
     ports:
       - 3636:636
       - 3637:389
@@ -27,7 +27,8 @@ services:
     command: /bin/sh
     hostname: ldap.lihuaio.com
     networks:
-     - ops
+      - ops
+
 networks:
-    ops:
-        external: true
+  ops:
+    external: true
